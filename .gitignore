@@ -1,3 +1,8 @@
+# Ignore generated files and cache
 __pycache__/
 *.pyc
+
+# Ignore output CSVs, except sample ones for demonstration
 output/*.csv
+!output/error_message.csv
+!output/user_statistics.csv

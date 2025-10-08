@@ -9,10 +9,7 @@ def parse_log_file(logfile_path):
     errors = defaultdict(int)
     per_user = defaultdict(lambda: {"INFO": 0, "ERROR": 0})
 
-    pattern = r"ticky: ([\w+]*):? ([\w' ]*)[\[[#0-9]*\]?]? ?\((.*)\)$"
-    # we can also use: r"ticky: (INFO|ERROR)[:]? (.+) \(([\w\.]+)\)$"
-
-
+    pattern = r"ticky: (INFO|ERROR)[:]? (.+) \(([\w\.]+)\)$"
 
     with open(logfile_path, "r") as file:
         for line in file:
